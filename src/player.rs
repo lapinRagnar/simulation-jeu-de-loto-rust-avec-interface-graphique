@@ -61,7 +61,7 @@ pub struct GameResult {
 }
 
 // Ligne 44: Catégories de gains (comme au vrai Loto)
-#[derive(Debug, PartialEq, Serialize, Deserialize, Clone, Hash, Eq)]
+/* #[derive(Debug, PartialEq, Serialize, Deserialize, Clone, Hash, Eq)]
 pub enum WinCategory {
     Jackpot,     // 5 numéros + chance
     Rank2,       // 5 numéros
@@ -74,23 +74,44 @@ pub enum WinCategory {
     Rank9,       // 1 numéro + chance
     Rank10,      // 1 numéro
     NoWin,
+} */
+
+#[derive(Debug, PartialEq, Serialize, Deserialize, Clone, Hash, Eq)]
+pub enum WinCategory {
+    Jackpot,     // 6 numéros + chance
+    Rank2,       // 6 numéros
+    Rank3,       // 5 numéros + chance
+    Rank4,       // 5 numéros
+    Rank5,       // 4 numéros + chance
+    Rank6,       // 4 numéros
+    Rank7,       // 3 numéros + chance
+    Rank8,       // 3 numéros
+    Rank9,       // 2 numéros + chance
+    Rank10,      // 2 numéros
+    Rank11,      // 1 numéro + chance
+    Rank12,      // 1 numéro
+    NoWin,
 }
+
+
 
 // Ligne 60: Implémentation des catégories
 impl WinCategory {
     // Ligne 62: Déterminer la catégorie selon les matches
     pub fn from_matches(numbers: u8, chance: bool) -> Self {
         match (numbers, chance) {
-            (5, true) => WinCategory::Jackpot,
-            (5, false) => WinCategory::Rank2,
-            (4, true) => WinCategory::Rank3,
-            (4, false) => WinCategory::Rank4,
-            (3, true) => WinCategory::Rank5,
-            (3, false) => WinCategory::Rank6,
-            (2, true) => WinCategory::Rank7,
-            (2, false) => WinCategory::Rank8,
-            (1, true) => WinCategory::Rank9,
-            (1, false) => WinCategory::Rank10,
+            (6, true) => WinCategory::Jackpot,
+            (6, false) => WinCategory::Rank2,
+            (5, true) => WinCategory::Rank3,
+            (5, false) => WinCategory::Rank4,
+            (4, true) => WinCategory::Rank5,
+            (4, false) => WinCategory::Rank6,
+            (3, true) => WinCategory::Rank7,
+            (3, false) => WinCategory::Rank8,
+            (2, true) => WinCategory::Rank9,
+            (2, false) => WinCategory::Rank10,
+            (1, true) => WinCategory::Rank11,
+            (1, false) => WinCategory::Rank12,
             _ => WinCategory::NoWin,
         }
     }
@@ -98,16 +119,18 @@ impl WinCategory {
     // Ligne 78: Description textuelle pour l'affichage
     pub fn description(&self) -> String {
         match self {
-            WinCategory::Jackpot => "5 numéros + numéro chance - JACKPOT!".to_string(),
-            WinCategory::Rank2 => "5 numéros".to_string(),
-            WinCategory::Rank3 => "4 numéros + numéro chance".to_string(),
-            WinCategory::Rank4 => "4 numéros".to_string(),
-            WinCategory::Rank5 => "3 numéros + numéro chance".to_string(),
-            WinCategory::Rank6 => "3 numéros".to_string(),
-            WinCategory::Rank7 => "2 numéros + numéro chance".to_string(),
-            WinCategory::Rank8 => "2 numéros".to_string(),
-            WinCategory::Rank9 => "1 numéro + numéro chance".to_string(),
-            WinCategory::Rank10 => "1 numéro".to_string(),
+            WinCategory::Jackpot => "6 numéros + numéro chance - JACKPOT! 🎉".to_string(),
+            WinCategory::Rank2 => "6 numéros".to_string(),
+            WinCategory::Rank3 => "5 numéros + numéro chance".to_string(),
+            WinCategory::Rank4 => "5 numéros".to_string(),
+            WinCategory::Rank5 => "4 numéros + numéro chance".to_string(),
+            WinCategory::Rank6 => "4 numéros".to_string(),
+            WinCategory::Rank7 => "3 numéros + numéro chance".to_string(),
+            WinCategory::Rank8 => "3 numéros".to_string(),
+            WinCategory::Rank9 => "2 numéros + numéro chance".to_string(),
+            WinCategory::Rank10 => "2 numéros".to_string(),
+            WinCategory::Rank11 => "1 numéro + numéro chance".to_string(),
+            WinCategory::Rank12 => "1 numéro".to_string(),
             WinCategory::NoWin => "Pas de gain".to_string(),
         }
     }
