@@ -173,7 +173,7 @@ impl eframe::App for LotoApp {
                             let count = self.statistics.get(&category).unwrap_or(&0);
                             if *count > 0 || category == WinCategory::Jackpot {
                                 ui.label(format!(
-                                    "{}: {} joueur(s) - gain {}", 
+                                    "{}: {} joueur(s) - gain {} €", 
                                     category.description(),
                                     count,
                                     category.prize()
