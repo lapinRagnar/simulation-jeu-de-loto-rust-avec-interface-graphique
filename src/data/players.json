@@ -1,0 +1,237 @@
+{
+  "draw_date": "2026-04-04 00:19:30",
+  "players": [
+    {
+      "id": 1,
+      "first_name": "Mac Schneider",
+      "last_name": "Deondre White",
+      "grid": {
+        "numbers": [
+          18,
+          20,
+          27,
+          28,
+          37
+        ],
+        "chance": 1
+      }
+    },
+    {
+      "id": 2,
+      "first_name": "Assunta Hilpert",
+      "last_name": "Alexane Smith",
+      "grid": {
+        "numbers": [
+          24,
+          31,
+          34,
+          38,
+          40
+        ],
+        "chance": 1
+      }
+    },
+    {
+      "id": 3,
+      "first_name": "Cassidy Cronin",
+      "last_name": "Gustave Kautzer",
+      "grid": {
+        "numbers": [
+          5,
+          10,
+          12,
+          15,
+          44
+        ],
+        "chance": 5
+      }
+    },
+    {
+      "id": 4,
+      "first_name": "Raheem VonRueden",
+      "last_name": "Daniella Hammes",
+      "grid": {
+        "numbers": [
+          16,
+          23,
+          25,
+          26,
+          44
+        ],
+        "chance": 3
+      }
+    },
+    {
+      "id": 5,
+      "first_name": "Domingo Goodwin",
+      "last_name": "Lavern Johnston",
+      "grid": {
+        "numbers": [
+          15,
+          24,
+          37,
+          39,
+          49
+        ],
+        "chance": 6
+      }
+    },
+    {
+      "id": 6,
+      "first_name": "Jalen Wolf",
+      "last_name": "Ruthie Denesik",
+      "grid": {
+        "numbers": [
+          13,
+          18,
+          28,
+          32,
+          44
+        ],
+        "chance": 6
+      }
+    },
+    {
+      "id": 7,
+      "first_name": "Annabelle Yost",
+      "last_name": "Joelle Nader",
+      "grid": {
+        "numbers": [
+          7,
+          13,
+          36,
+          43,
+          48
+        ],
+        "chance": 1
+      }
+    },
+    {
+      "id": 8,
+      "first_name": "Emile Mills",
+      "last_name": "Eladio Cole",
+      "grid": {
+        "numbers": [
+          18,
+          34,
+          35,
+          39,
+          42
+        ],
+        "chance": 6
+      }
+    },
+    {
+      "id": 9,
+      "first_name": "Brooklyn Luettgen",
+      "last_name": "Roxanne Klein",
+      "grid": {
+        "numbers": [
+          8,
+          22,
+          24,
+          27,
+          28
+        ],
+        "chance": 1
+      }
+    },
+    {
+      "id": 10,
+      "first_name": "Filiberto Ledner",
+      "last_name": "Bria Klein",
+      "grid": {
+        "numbers": [
+          3,
+          5,
+          14,
+          40,
+          44
+        ],
+        "chance": 10
+      }
+    }
+  ],
+  "winning_grid": {
+    "numbers": [
+      11,
+      13,
+      22,
+      31,
+      43
+    ],
+    "chance": 10
+  },
+  "results": [
+    {
+      "player_id": 1,
+      "player_name": "Mac Schneider Deondre White",
+      "numbers_matched": 0,
+      "chance_matched": false,
+      "category": "NoWin"
+    },
+    {
+      "player_id": 2,
+      "player_name": "Assunta Hilpert Alexane Smith",
+      "numbers_matched": 1,
+      "chance_matched": false,
+      "category": "Rank10"
+    },
+    {
+      "player_id": 3,
+      "player_name": "Cassidy Cronin Gustave Kautzer",
+      "numbers_matched": 0,
+      "chance_matched": false,
+      "category": "NoWin"
+    },
+    {
+      "player_id": 4,
+      "player_name": "Raheem VonRueden Daniella Hammes",
+      "numbers_matched": 0,
+      "chance_matched": false,
+      "category": "NoWin"
+    },
+    {
+      "player_id": 5,
+      "player_name": "Domingo Goodwin Lavern Johnston",
+      "numbers_matched": 0,
+      "chance_matched": false,
+      "category": "NoWin"
+    },
+    {
+      "player_id": 6,
+      "player_name": "Jalen Wolf Ruthie Denesik",
+      "numbers_matched": 1,
+      "chance_matched": false,
+      "category": "Rank10"
+    },
+    {
+      "player_id": 7,
+      "player_name": "Annabelle Yost Joelle Nader",
+      "numbers_matched": 2,
+      "chance_matched": false,
+      "category": "Rank8"
+    },
+    {
+      "player_id": 8,
+      "player_name": "Emile Mills Eladio Cole",
+      "numbers_matched": 0,
+      "chance_matched": false,
+      "category": "NoWin"
+    },
+    {
+      "player_id": 9,
+      "player_name": "Brooklyn Luettgen Roxanne Klein",
+      "numbers_matched": 1,
+      "chance_matched": false,
+      "category": "Rank10"
+    },
+    {
+      "player_id": 10,
+      "player_name": "Filiberto Ledner Bria Klein",
+      "numbers_matched": 0,
+      "chance_matched": true,
+      "category": "NoWin"
+    }
+  ]
+}

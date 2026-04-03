@@ -2,8 +2,9 @@
 use serde::{Serialize, Deserialize};
 
 // Ligne 3: Imports pour les noms français
-use fake::faker::name::raw::*;
-use fake::locales::FR;
+// use fake::faker::name::raw::*;
+// use fake::locales::FR;
+use fake::faker::name::en::Name;  // Changement: plus de FR, on utilise en
 use fake::Fake;
 
 // Ligne 6: Notre module loto
@@ -23,10 +24,12 @@ impl Player {
     // Ligne 17: Générer un joueur aléatoire
     pub fn generate(id: u32) -> Self {
         // Ligne 19: Je génère un prénom français
-        let first_name: String = FirstName(FR).fake();
+        // let first_name: String = FirstName(FR).fake();
+        let first_name: String = Name().fake();
         
         // Ligne 20: Je génère un nom français
-        let last_name: String = LastName(FR).fake();
+        // let last_name: String = LastName(FR).fake();
+        let last_name: String = Name().fake();
         
         // Ligne 22: Je crée le joueur avec sa grille aléatoire
         Self {

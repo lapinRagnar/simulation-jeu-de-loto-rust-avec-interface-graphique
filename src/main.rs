@@ -4,6 +4,7 @@ mod player;
 
 // Ligne 4: Imports
 use eframe::egui;
+// use egui::Ui;  // Ajout important
 use player::*;
 use loto::*;
 use chrono::Local;
@@ -226,9 +227,17 @@ fn main() -> Result<(), eframe::Error> {
     };
     
     // Ligne 206: Lancer l'application
+    /*     eframe::run_native(
+        "Simulateur de Loto",
+        options,
+        Box::new(|_cc| Ok(Box::new(LotoApp::default()))), 
+    ) */
+
+    // Version simplifiée qui devrait fonctionner
     eframe::run_native(
         "Simulateur de Loto",
         options,
         Box::new(|_cc| Box::new(LotoApp::default())),
     )
+
 }
