@@ -1,0 +1,6 @@
+[package]
+name = "a4-simulation-jeu-de-loto-rust-avec-interface-graphique"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
