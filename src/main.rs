@@ -164,6 +164,8 @@ impl eframe::App for LotoApp {
                             WinCategory::Rank8,
                             WinCategory::Rank9,
                             WinCategory::Rank10,
+                            WinCategory::Rank11,
+                            WinCategory::Rank12,
                             WinCategory::NoWin,
                         ];
                         
@@ -171,9 +173,10 @@ impl eframe::App for LotoApp {
                             let count = self.statistics.get(&category).unwrap_or(&0);
                             if *count > 0 || category == WinCategory::Jackpot {
                                 ui.label(format!(
-                                    "{}: {} joueur(s)", 
+                                    "{}: {} joueur(s) - gain {}", 
                                     category.description(),
-                                    count
+                                    count,
+                                    category.prize()
                                 ));
                             }
                         }

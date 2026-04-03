@@ -134,4 +134,26 @@ impl WinCategory {
             WinCategory::NoWin => "Pas de gain".to_string(),
         }
     }
+
+
+    // Optionnel: Ajouter les gains en euros
+    pub fn prize(&self) -> u64 {
+        match self {
+            WinCategory::Jackpot => 5_000_000,  // 5 millions d'euros
+            WinCategory::Rank2 => 500_000,
+            WinCategory::Rank3 => 50_000,
+            WinCategory::Rank4 => 5_000,
+            WinCategory::Rank5 => 500,
+            WinCategory::Rank6 => 100,
+            WinCategory::Rank7 => 50,
+            WinCategory::Rank8 => 20,
+            WinCategory::Rank9 => 10,
+            WinCategory::Rank10 => 5,
+            WinCategory::Rank11 => 3,
+            WinCategory::Rank12 => 2,
+            WinCategory::NoWin => 0,
+        }
+    }
+
+
 }
