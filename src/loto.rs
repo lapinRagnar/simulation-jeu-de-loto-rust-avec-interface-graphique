@@ -28,8 +28,8 @@ impl LotoGrid {
         // Ligne 17: Je mélange cette liste
         numbers.shuffle(&mut rng);
         
-        // Ligne 19: Je prends les 5 premiers
-        let mut selected: Vec<u8> = numbers.into_iter().take(5).collect();
+        // Ligne 19: Je prends les 6 premiers
+        let mut selected: Vec<u8> = numbers.into_iter().take(6).collect();
         
         // Ligne 20: Je les trie pour que ce soit plus joli
         selected.sort();
@@ -67,7 +67,18 @@ mod tests {
     #[test]
     fn test_generation() {
         let grid = LotoGrid::generate();
-        assert_eq!(grid.numbers.len(), 5);
+        assert_eq!(grid.numbers.len(), 6);  // Vérifie qu'on a 6 numéros
         assert!(grid.chance >= 1 && grid.chance <= 10);
+        
+        // Vérifie que tous les numéros sont entre 1 et 49
+        for &num in &grid.numbers {
+            assert!(num >= 1 && num <= 49);
+        }
+        
+        // Vérifie qu'il n'y a pas de doublons
+        let mut sorted = grid.numbers.clone();
+        sorted.sort();
+        sorted.dedup();
+        assert_eq!(sorted.len(), 6);
     }
 }
